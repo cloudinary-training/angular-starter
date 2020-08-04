@@ -15,3 +15,9 @@ ng serve
 ```
 
 Then go to `localhost:4200`
+
+## Update Angular CLI
+
+```
+ng update
+```
