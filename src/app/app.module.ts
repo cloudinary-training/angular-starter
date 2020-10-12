@@ -8,12 +8,14 @@ import {
 } from "@cloudinary/angular-5.x";
 
 import { AppComponent } from "./app.component";
+import { UploadComponent } from './upload/upload.component';
+import { UploadModule } from './upload/upload.module';
 
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, CloudinaryModule.forRoot(Cloudinary, {
-    cloud_name: "pictures77"
+  imports: [BrowserModule, UploadModule, CloudinaryModule.forRoot(Cloudinary, {
+    cloud_name: ""
   } as CloudinaryConfiguration)],
   providers: [],
   bootstrap: [AppComponent]

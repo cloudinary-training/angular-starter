@@ -11,7 +11,7 @@ import { Component } from "@angular/core";
 
 
 export class AppComponent {
-  title = "CodeSandbox";
+  title = "Cloudinary Angular Upload page";
 }
 
 
