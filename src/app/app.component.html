@@ -1,8 +1,17 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div>
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
+  <mat-toolbar color="primary">
+  <mat-toolbar-row>
 
-  <app-upload></app-upload>
+    <h1>Cloudinary</h1>
+    <span class="menu-spacer"></span>
+    <div>
+      <a mat-button [routerLink]="'/home'"> Upload </a>
+      <a mat-button [routerLink]="'/product-gallery'"> Product Gallery </a>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<router-outlet></router-outlet>
+
 </div>
