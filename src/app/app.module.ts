@@ -24,23 +24,30 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule} from '@angular/material/button';
+import { MediaLibraryComponent } from './media-library/media-library.component';
+import { VideoPlayerComponent } from './video-player/video-player.component';
+
+import {ScriptService} from '../script_handling/script.service';
 
 
 
 
 const routes: Routes = [
-  { path: 'product-gallery', component: ProductGalleryComponent },
   { path: 'home', component: HomeComponent },
-  { path: '', redirectTo: '/', pathMatch: 'full' },
+  { path: 'product-gallery', component: ProductGalleryComponent },
+  { path: 'media-library', component: MediaLibraryComponent },
+  { path: 'video-player', component: VideoPlayerComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  
 ]
 
 
 @NgModule({
-  declarations: [AppComponent, ProductGalleryComponent, HomeComponent],
+  declarations: [AppComponent, ProductGalleryComponent, HomeComponent, MediaLibraryComponent, VideoPlayerComponent],
   imports: [BrowserModule,RouterModule.forRoot(routes), UploadModule,BrowserModule, BrowserAnimationsModule, HttpClientModule, MatToolbarModule, MatSidenavModule, MatListModule, MatButtonModule, MatIconModule, CloudinaryModule.forRoot(Cloudinary, {
     cloud_name: ""
   } as CloudinaryConfiguration)],
-  providers: [],
+  providers: [ScriptService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
