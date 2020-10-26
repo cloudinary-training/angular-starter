@@ -18,8 +18,8 @@ export class DialogComponent implements OnInit {
 
   ngOnInit() {
       this.myWidget = cloudinary.createUploadWidget({
-        cloudName: '', 
-        uploadPreset: ''}, (error, result) => { 
+        cloudName: 'vdeub', 
+        uploadPreset: 'unsigned_upload_angular'}, (error, result) => { 
         if (!error && result && result.event === "success") { 
           console.log('Done! Here is the image info: ', result.info); 
         }
